@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+</head>
+<body>
+
+    <!-- HTML code with id's -->
+    <p>Enter some text to add to the list</p>
+    <input type="text" id="input-text">
+    <button id="add-text">Add</button>
+
+    <br>
+    <button id="clear">Clear</button>
+
+    <ul id='textList'></ul>
+
+<script>
+
+    // Defining variables
+    let addButton = document.querySelector('#add-text')
+    let textInput = document.querySelector('#input-text')
+    let textList = document.querySelector('#textList')
+
+    let clearButton = document.querySelector('#clear')
+    
+    // initialize listCount to 0
+    let listCount = 0
+
+    // allows you to just press Enter to input an entry
+    document.addEventListener('keyup', function(){
+        console.log(event.keyCode)
+        if (event.keyCode == 13) {
+            addItem()
+        }
+    })
+
+    addButton.addEventListener('click', function(){
+
+        addItem() // when add button is clicked, addItem() is initiated
+        
+    })
+
+    // function for adding an entry
+    function addItem() {
+
+        // if there no is text in the input, it is not added to list (prevent empty entries)
+        if (textInput.value.length == 0) {
+            return
+        } else if (textInput.value.length > 50) { // if the item contains more than 50 characters, error message is displayed
+            alert('You cannot add an item that contains more than 50 characters.')
+        }
+
+        // ensures list is 10 items long
+        if (listCount < 10) {
+            let newInput = textInput.value // grabs input from the text input box
+            let newLi = document.createElement('li') // creates a new list item
+            newLi.innerHTML = newInput // updates the list item with the input
+            textList.appendChild(newLi); // appends the list item to the textList
+            textInput.value = '' // returns the text box to a blank state
+            listCount = listCount + 1 // adds 1 to the list counter
+        } else { // if list is over 10 items, display an error message
+            alert('List is full. You cannot add more items at this time.')
+            textInput.value = '' // return the text box to a blank state
+        }
+
+    }
+
+    // clears list and returns listCount to 0
+    clearButton.addEventListener('click', function() {
+        textList.innerHTML = ''
+        listCount = 0
+    })
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Conference Registration Form</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="form-stylesheet.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
+</head>
+
+<div class="m-3">
+<div class="jumbotron">
+    <h1>Conference Registration Form</h1>
+</div>
+</div>
+
+<P>
+    <br>Enter your name: <input type="text" name="name-input">
+    <br>Enter your password: <input type="password" name="password-input">
+    <br>Enter your email: <input type="email" name="email-input">
+
+    <p>Select T-Shirt size:
+        <select name="size-selection">
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+        </select>
+    </p>
+
+    <br>Enter your date of birth: <input type="date" name="date-input">
+
+</P>
+
+<p>Would you like to receive emails from conference sponsors?</p>
+
+<input name="conf_email" type="radio">Yes
+<input name="conf_email" type="radio">No
+
+<p>Which conference session will you be attending?</p>
+
+<input name="conf_time" type="checkbox">Morning
+<input name="conf_time" type="checkbox">Afternoon
+
+<div></div><input type="submit" name="submit-button"></div>
+
+</html>

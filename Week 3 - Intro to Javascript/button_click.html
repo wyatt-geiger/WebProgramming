@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+</head>
+<body>
+
+    <button>Click Here!</button>
+
+    <button id="other-button">Click here too!</button>
+
+<script>
+
+    // Find the FIRST button element in the page
+    let button = document.querySelector('button')
+
+    // Add an event listener for click events, with a callback function
+    // The callback function runs when the event (clicking the button) happens
+    button.addEventListener('click', function(){
+        alert('You clicked the button!')
+        button.innerHTML = 'The button was clicked!'
+    })
+
+    let anotherButton = document.querySelector('#other-button')
+
+    anotherButton.addEventListener('click', function(){
+        alert('You clicked the other button!')
+    })
+
+</script>
+
+</body>
+</html>

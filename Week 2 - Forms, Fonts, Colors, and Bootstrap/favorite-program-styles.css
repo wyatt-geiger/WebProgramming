@@ -1,0 +1,14 @@
+.jumbotron {
+    background-color: rgb(255, 127, 255);
+    text-align: center;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #ffc266;
+}
+
+.sample_code {
+    border-style: dashed;
+    border-width: 5px;
+}

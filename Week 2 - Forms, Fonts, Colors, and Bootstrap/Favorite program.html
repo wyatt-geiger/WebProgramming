@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Favorite Program</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="favorite-program-styles.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+</head>
+
+<div class="m-3">
+<div class="jumbotron">
+    <h1>Party Invites Program</h1>
+</div>
+</div>
+
+<p>This program creates a party list and writes them to a text file using Python. It also validates whether or not the name already exists in the text file.</p>
+
+<p>Here is some sample code from the beginning of the program:</p>
+
+<div class="sample_code">
+<pre><code>import os
+    invite_file = open('party_invites.txt','w')  # w for write mode             # change mode to a to build upon file instead of deleting it
+    invite_file.write('Hostess - Betty Boop\n') # initialize a txt file
+    invite_file.close()                                                         # initializing for homework
+    # original input is a string, with commas separating each entry
+    user_input = input('Enter guest names, separating each one with a comma. ') # rest of the program for homework
+    user_input_list = user_input.split(',')  # change to a list
+    user_input_fixed = ''  # a new string to hold the fixed items, so they can be written to the file
+    for i in range(len(user_input_list)):
+        guest_fixed = user_input_list[i].strip()
+        user_input_fixed = 'Guest ' + str(i + 1) + ' - ' + guest_fixed + '\n'
+        invite_file = open('party_invites.txt','a')  # 'a' for append mode
+        invite_file.write(user_input_fixed)
+    invite_file.close()</code></pre>
+</div>
+</html>

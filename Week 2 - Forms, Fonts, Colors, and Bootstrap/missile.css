@@ -1,0 +1,9 @@
+#real-alert {
+    color: red;
+    display: block;
+
+}
+
+#test-only {
+    color: green;
+}

@@ -1,0 +1,8 @@
+.jumbotron {
+    background-color: burlywood;
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    background-image: linear-gradient(#fc8403,#fc5a03);
+}
