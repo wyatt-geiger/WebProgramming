@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mouse Events</title>
+
+  <style>
+
+    #canvas {
+      border: 1px black solid;
+    }
+
+    #radius {
+      color:green
+    }
+
+  </style>
+
+</head>
+<body>
+
+
+<P>Drag the mouse on the canvas</P>
+
+<!-- Allows the user the select a radius, maximum of 20 pixels (due to limited canvas size) -->
+<label for="radius">Set preferred circle size:</label>
+<input id="radius" type="range" min="1" max="20">
+<!-- Allows the user to select a preferred color -->
+<label for="circle_color">Set preferred color:</label>
+<input id="circle_color" type="color">
+
+<!-- Placed in <P> paragraph tags so it can sit below the inputs (otherwise it sits next to it) -->
+<P><canvas id="canvas" height="400" width="400"></canvas></P>
+
+
+<script>
+
+  var canvas = document.getElementById("canvas")
+  var context = canvas.getContext("2d")
+  
+
+  // Keep track of whether the mouse button has been pressed down or not.
+  var mousedown = false 
+
+  canvas.addEventListener("mousedown", function() {
+    mousedown = true
+  })
+
+  canvas.addEventListener("mouseup", function() {
+    mousedown = false 
+  })
+
+  canvas.addEventListener("mousemove", function() {
+
+    // If the mouse button is not pressed down, do not draw.
+    if (!mousedown) { return }
+
+    // event is a built-in variable, contains the event that triggered this function
+    // get the x, y location of the event
+    var x = event.offsetX
+    var y = event.offsetY   //offsetX, offsetY, may not work in older browsers
+
+
+
+    // This variable is used to store the value of the range
+    var r = document.getElementById("radius").value;
+    // This variable is used to store the color selection
+    var c = document.getElementById("circle_color").value;
+
+    //Draw a filled rectangle centered under the mouse click
+    //x, y is the top left corner, so shift up and left by 5 to center it under the mouse.
+    //context.fillRect(x-5, y-5, 10, 10)
+
+    // draw circle
+    context.beginPath()
+    context.arc(x-5, y-5, r, 0, 2 * Math.PI) // implements the radius value to change the size
+    context.fillStyle = c; // uses the color selection to change the color of the drawing
+    context.fill() // solid circle
+
+  })
+
+</script>
+
+</body>
+</html>

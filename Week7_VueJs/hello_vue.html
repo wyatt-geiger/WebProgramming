@@ -1,0 +1,55 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<!-- Create a Vue instance and associate it with an element on the page
+with convention div#app -->
+
+<!-- The Vue instance will manage the view - the HTML/content inside the #app div -->
+
+<div id="app">
+    <h1>Hello Vue!</h1>
+
+    <p>{{ message | uppercase }}</p> 
+    <!-- Apply .toUpperCase() Javascript to the message -->
+
+    <button v-on:click="addExclamation">Add !</button>
+    <!-- Add a button -->
+</div>
+
+<!-- Everything inside the div#app is the template -->
+
+<script>
+
+let app = new Vue({
+    el: '#app',
+    data: {
+        message: 'Welcome!',
+        count: 1 // Initialize a count variable to 1
+    },
+
+    // This function modifies the message property
+    // Data properties have to be referenced with this.propName
+    // The button will now add ! everytime the button is clicked
+
+    methods: {
+        addExclamation: function() {
+            
+            if (this.count < 10) {  // If the count value is less than 10
+                this.message = this.message + '!' // Then add an exclamation point
+                this.count += 1; // And add 1 to the count
+            } else { // Alert that displays if user attempts to add more than 10 exclamation points
+                alert("You cannot exceed 10 exclamation points.")
+            }
+            
+
+        }
+    },
+    
+    filters: {
+        uppercase: function(string) {
+            return string.toUpperCase()
+        }
+    },
+
+})
+
+</script>

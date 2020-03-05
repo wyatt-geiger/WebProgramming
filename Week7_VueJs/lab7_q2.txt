@@ -1,0 +1,1 @@
+This means that a variable is being used in the template that doesn't exist within the Vue data. This occurs because the "total" property is not defined on the instance but is referenced during the render. To fix this issue, the total variable needs to be defined using a computed property.
