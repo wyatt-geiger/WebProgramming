@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Resume Builder</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<!-- Jumbotron with a jumbofont class that allows the text itself to be edited -->
+<div class="m-3">
+    <div class="jumbotron">
+        <h1 class="jumbofont">Resume Builder</h1>
+    </div>
+    </div>
+
+<P class="margin-padding">
+    
+    <div class="resume-fields"> <!-- Generic resume fields class that is applied to the various resume blocks (e.g. Personal Information, Summary, etc.) -->
+    <div class="header">Personal Information</div> <!-- Generic header class applied to the title of each resume block -->
+    <br>First Name: <input type="text" name="name-input"> Middle Initial: <input type="text" name="name-input"> Last Name: <input type="text" name="name-input">
+    <br>Email: <input type="email" name="email-input"> Enter your phone number: <input type="text" name="phone-input">
+    <br>Street Address: <input type="text" name="street-input"> City: <input type="text" name="csZIP-input"> State: <input type="text" name="csZIP-input"> ZIP: <input type="text" name="csZIP-input">
+    </div>
+
+    <div class="resume-fields">
+    <div class="header">Summary:</div>
+    <ul>
+    <li>Typically in a Summary section, you would add a couple of relevant skills for the job you're applying for and let them know why you're applying for this job.
+    <li>In addition, you want to create one or two sentences that show general workplace skills, such as adaptibility.
+    <li>Generally, this section should only be 2-4 sentences long.</li>
+    </ul>
+    <p><textarea id="summary-input" name="summary-input" rows="5" cols="140"></textarea></p></div>
+
+
+    <div class="header">Education:</div>
+    <div>
+    <input name="type-education" type="radio" class="js-education" value="High School">High school</input>
+    <input name="type-education" type="radio" class="js-education" value="University">University</input>
+    <input name="type-education" type="radio" class="js-education" value="None">None</input>
+    </div>
+    </div>
+
+
+    <p id="no-education" class="education-alert hidden">You have chosen to not add an Education section.</p>
+
+    
+    <div id="uni-education" class="uni-hidden resume-fields">
+        <br>Name of University: <input type="text">
+        <br>Degree Field: <input type="text">
+        <br>Location: <input type="text">
+        <br><input name="graduatedYN" type="checkbox" id="uni-grad">Graduated?
+        <div name="gradbox" class="currentEnroll current-hidden">Expected Graduation: <input type="text"></div>
+        <div name="gradbox" class="graduated graduated-hidden">Graduation Year: <input type="text"></div>
+    </div>
+
+
+    <div id="hs-education" class="hs-hidden resume-fields">
+        <br>Name of High School: <input type="text">
+        <br>Location: <input type="text">
+        <br><input name="graduatedNY" type="checkbox" id="hs-grad">Graduated?
+        <div name="gradbox" class="currentEnroll current-hidden">Current Grade/Year: <input type="text"></div>
+        <div name="gradbox" class="graduated graduated-hidden">Graduation Year: <input type="text"></div>
+    </div>
+
+
+    <div class="resume-fields">
+    <div class="header">Involvement and Leadership:</div>
+
+    <p><textarea id="involvement-input" name="involvement-input" rows="5" cols="140"></textarea></p></div>
+    <ul>
+        <li>In this section, include any volunteer work or other classes that you have participated in, especially if they are relevant to the job you are applying for.</li>
+        <li>Also list any important leadership roles you have been involved in.</li>
+    </ul>
+
+    <div class="resume-fields">
+    <div class="header">Employment History:</div>
+
+    <!-- Company #1 -->
+
+    <div class="companies">
+    <br>Company Name #1:
+    <br><textarea id="employment-input" name="employment-input" rows="1" cols="40"></textarea>
+
+    <br>Location (City & State):
+    <br><textarea id="employment-input" name="employment-input" rows="1" cols="40"></textarea>
+
+    <br>Dates Employed:
+    <br><textarea id="employment-input" name="employment-input" rows="1" cols="40"></textarea>
+
+    <br>Important Roles & Duties: 
+    <br><textarea id="employment-input" name="employment-input" rows="1" cols="140"></textarea>
+    <br><textarea id="employment-input" name="employment-input" rows="1" cols="140"></textarea>
+    <br><textarea id="employment-input" name="employment-input" rows="1" cols="140"></textarea>
+    </div>
+
+    <!-- Company #2 -->
+
+    <div class="companies">
+    <br>Company Name #2:
+    <br><textarea id="employment-input" name="employment-input" rows="1" cols="40"></textarea>
+
+    <br>Location (City & State):
+    <br><textarea id="employment-input" name="employment-input" rows="1" cols="40"></textarea>
+
+    <br>Dates Employed:
+    <br><textarea id="employment-input" name="employment-input" rows="1" cols="40"></textarea>
+
+    <br>Important Roles & Duties: 
+    <br><textarea id="employment-input" name="employment-input" rows="1" cols="140"></textarea>
+    <br><textarea id="employment-input" name="employment-input" rows="1" cols="140"></textarea>
+    <br><textarea id="employment-input" name="employment-input" rows="1" cols="140"></textarea>
+    </div>
+
+    <!-- Company #3 -->
+
+    <div class="companies">
+    <br>Company Name #3:
+    <br><textarea id="employment-input" name="employment-input" rows="1" cols="40"></textarea>
+
+    <br>Location (City & State):
+    <br><textarea id="employment-input" name="employment-input" rows="1" cols="40"></textarea>
+
+    <br>Dates Employed:
+    <br><textarea id="employment-input" name="employment-input" rows="1" cols="40"></textarea>
+
+    <br>Important Roles & Duties: 
+    <br><textarea id="employment-input" name="employment-input" rows="1" cols="140"></textarea>
+    <br><textarea id="employment-input" name="employment-input" rows="1" cols="140"></textarea>
+    <br><textarea id="employment-input" name="employment-input" rows="1" cols="140"></textarea>
+    </div>
+
+</P>
+
+
+<script>
+
+(function () {
+  
+  // check radio button selection
+
+  let education = Array.from(document.getElementsByClassName('js-education'))
+  .forEach(element => {
+    element.addEventListener('click', e => {
+
+      let selectedEducation = document.querySelector('input[name="type-education"]:checked').value;
+
+      if (selectedEducation == 'None') { // block that shows an alert stating no education field has been selected
+        document.getElementById('no-education').classList.remove('hidden');
+        document.getElementById('uni-education').classList.add('uni-hidden');
+        document.getElementById('hs-education').classList.add('hs-hidden');
+      }
+      else if (selectedEducation == 'University') { // block that reveals the University education form fields
+        document.getElementById('uni-education').classList.remove('uni-hidden');
+        document.getElementById('no-education').classList.add('hidden');
+        document.getElementById('hs-education').classList.add('hs-hidden');
+      }
+      else { // block that reveals the High School education form fields
+        document.getElementById('hs-education').classList.remove('hs-hidden');
+        document.getElementById('no-education').classList.add('hidden');
+        document.getElementById('uni-education').classList.add('uni-hidden');
+      }
+
+      Array.from(document.getElementsByClassName('graduated')).forEach(el => el.classList.add('graduated-hidden'));
+      Array.from(document.getElementsByClassName('currentEnroll')).forEach(el => el.classList.add('current-hidden'));
+
+    })
+  });
+
+  // check graduation selection
+
+    // university selected
+    document.getElementById('uni-grad').addEventListener('click', e => {
+
+    let checktest = document.querySelector('input[name="graduatedYN"]:checked');
+
+    // If checked, field for graduation date will be displayed. If unchecked, field for expected graduation will be displayed.
+
+    if (checktest) {
+        Array.from(document.getElementsByClassName('graduated')).forEach(el => el.classList.remove('graduated-hidden'));
+        Array.from(document.getElementsByClassName('currentEnroll')).forEach(el => el.classList.add('current-hidden'));
+    } else {
+        Array.from(document.getElementsByClassName('graduated')).forEach(el => el.classList.add('graduated-hidden'));
+        Array.from(document.getElementsByClassName('currentEnroll')).forEach(el => el.classList.remove('current-hidden'));
+    }
+
+    })
+
+    // high school selected
+    document.getElementById('hs-grad').addEventListener('click', e => {
+
+    let checktest = document.querySelector('input[name="graduatedNY"]:checked');
+
+    // If checked, field for graduation date will be displayed. If unchecked, field for expected graduation will be displayed. 
+
+    if (checktest) {
+        Array.from(document.getElementsByClassName('graduated')).forEach(el => el.classList.remove('graduated-hidden'));
+        Array.from(document.getElementsByClassName('currentEnroll')).forEach(el => el.classList.add('current-hidden'));
+    } else {
+        Array.from(document.getElementsByClassName('graduated')).forEach(el => el.classList.add('graduated-hidden'));
+        Array.from(document.getElementsByClassName('currentEnroll')).forEach(el => el.classList.remove('current-hidden'));
+    }
+
+})
+
+})
+();
+
+</script>
+</html>

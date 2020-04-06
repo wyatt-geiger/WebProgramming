@@ -1,0 +1,63 @@
+.jumbotron {
+    background-color:#6764A5;
+    text-align: center;
+}
+
+.jumbofont {
+    font-size: 400%;
+}
+
+.margin-padding {
+    margin-left: 100px;
+}
+
+body {
+    font-family: 'Baloo Thambi 2', cursive;
+    background-image: linear-gradient(#8583BA,#A8A6CF);
+}
+
+.resume-fields {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.header {
+    text-align: left;
+    font-size: 200%;
+}
+
+/** hidden class that hides education alert if None is not selected **/
+.hidden {
+    display: none;
+}
+
+.uni-hidden {
+    display: none;
+}
+
+.hs-hidden {
+    display: none;
+}
+
+.current-hidden {
+    display: none;
+}
+
+.graduated-hidden {
+    display: none;
+}
+
+/** color formatting for None selection **/
+.education-alert {
+    margin-top: 20px;
+    padding: 15px 10px;
+    background-color: #ff4c4c;
+    border: 5px solid crimson;
+    width: 380px;
+}
+
+.companies {
+    border-style: dashed;
+    width: 1150px;
+    margin-bottom: 5px;
+}
